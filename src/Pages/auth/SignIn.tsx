@@ -1,12 +1,14 @@
-import { Component } from "react"
 
 
-class SignIn extends Component {
+    const SignIn =() =>{
 
-    public initialize = () => {
-
+        return(
+            <div>
+                <h1>Sign In Page</h1>
+            </div>
+        )
     }
 
-}
+
 
 export default SignIn

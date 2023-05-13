@@ -1,0 +1,23 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .signup-form {
+    width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .signup-form {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  

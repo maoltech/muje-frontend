@@ -1,13 +1,54 @@
-import { Component } from "react"
+import { Form, Input, Button } from 'antd';
+import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
+import './SignUp.css';
 
 
+  const SignUp =() =>{
 
-class SignUP extends Component{
-
-    public signUp = () => {
-
+    const onFinish =()=>{
+        console.log('Success:');
     }
+    return (
+      <div className="signup-page">
+        <div className="signup-form">
+          <h2>Sign up</h2>
+          <Form
+            name="signup"
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+          >
+            <Form.Item
+              name="name"
+              rules={[{ required: true, message: 'Please input your name!' }]}
+            >
+              <Input prefix={<UserOutlined />} placeholder="Name" />
+            </Form.Item>
+            <Form.Item
+              name="email"
+              rules={[{ required: true, message: 'Please input your email!' }]}
+            >
+              <Input prefix={<MailOutlined />} placeholder="Email" />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[{ required: true, message: 'Please input your password!' }]}
+            >
+              <Input.Password
+                prefix={<LockOutlined />}
+                type="password"
+                placeholder="Password"
+              />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit" block>
+                Sign up
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
+      </div>
+    );
+  }
 
-}
 
-export default SignUP
+export default SignUp;

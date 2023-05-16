@@ -1,5 +1,5 @@
-import { Form, Input, Button} from 'antd';
-// import Button from '../../Global/Button';
+import { Form, Input} from 'antd';
+import Button from '../../Componenets/Button';
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
 import './auth.css';
 
@@ -19,10 +19,10 @@ import './auth.css';
             onFinish={onFinish}
           >
             <Form.Item
-              name="name"
-              rules={[{ required: true, message: 'Please input your name!' }]}
+              name="username"
+              rules={[{ required: true, message: 'Please input your Username!' }]}
             >
-              <Input prefix={<UserOutlined />} placeholder="Name" />
+              <Input prefix={<UserOutlined />} placeholder="Username" />
             </Form.Item>
             <Form.Item
               name="email"

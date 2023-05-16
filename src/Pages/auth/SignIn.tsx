@@ -1,5 +1,5 @@
 import { Form, Input } from 'antd';
-import Button from '../../Global/Button';
+import Button from '../../Componenets/Button';
 import { LockOutlined, MailOutlined } from '@ant-design/icons';
 import './auth.css';
 

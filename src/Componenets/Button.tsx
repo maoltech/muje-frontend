@@ -1,5 +1,5 @@
 
-import "../Styles/Button.css"
+import "./Button.css"
 import 'antd/dist/antd.css';
 import {Button, ButtonProps} from "antd";
 

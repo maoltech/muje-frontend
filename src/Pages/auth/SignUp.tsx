@@ -1,6 +1,7 @@
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button} from 'antd';
+// import Button from '../../Global/Button';
 import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
-import './SignUp.css';
+import './auth.css';
 
 
   const SignUp =() =>{
@@ -40,7 +41,7 @@ import './SignUp.css';
               />
             </Form.Item>
             <Form.Item>
-              <Button type="primary" htmlType="submit" block>
+              <Button  block>
                 Sign up
               </Button>
             </Form.Item>

@@ -9,6 +9,17 @@ import {
 import './Header.css';
 
 const Header: React.FC = () => {
+
+  const searchBarStyle ={
+      margin: '5px',
+      border: 'none',
+      borderRadius: '20px',
+      color: '#02a582',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+      cursor: 'pointer'
+  };
+
+
   return (
     <div className="header">
       <div className="header_left">
@@ -24,7 +35,7 @@ const Header: React.FC = () => {
 
       <div className='header_right'>
         <div className="search-bar">
-          <Input placeholder="Search" prefix={<SearchOutlined />} />
+          <Input style ={searchBarStyle} placeholder="Search" prefix={<SearchOutlined />} />
         </div>
 
         <div className="cart-icon">

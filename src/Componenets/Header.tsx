@@ -1,10 +1,10 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Input, Image } from 'antd';
+
 import {
   UserOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
-  HomeOutlined
 } from '@ant-design/icons';
 import './Header.css';
 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       </div>
       <div className='header_center'>
         <div className="logo">
-          <HomeOutlined />
+          <img src={"../Statics/Images/mujeheader.png"} alt='Home' />
         </div>
       </div>
 

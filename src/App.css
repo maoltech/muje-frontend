@@ -2,10 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: block;
   background-color: #50E3C2;
   background-image: 
       radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 

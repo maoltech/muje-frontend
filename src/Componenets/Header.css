@@ -10,7 +10,7 @@
     background: none;
     z-index: 999;
     justify-content: space-between;
-    border-bottom: solid 4px;
+    border-bottom: solid 2px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -31,7 +31,8 @@
 
   
   .logo {
-    font-size: 24px;
+    width: 100px;
+    height: 20px;
     cursor: pointer;
   }
   

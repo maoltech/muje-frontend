@@ -1,27 +1,48 @@
 import React from 'react';
-import { Carousel } from 'antd';
+import { Button, Carousel } from 'antd';
+import './Slider.css';
+import Buttons from './Button';
 
 const contentStyle: React.CSSProperties = {
-  height: '160px',
+  height: '500px',
+  margin: 'auto',
   color: '#fff',
   lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
+  textAlign: 'center', 
+  display: 'flex'
 };
+
+
 
 const Slider: React.FC = () => (
   <Carousel autoplay>
-    <div>
-      <h3 style={contentStyle}>1</h3>
+    <div className='sliderComp'>
+      <div style={contentStyle}>
+        <div className='left-side'>
+          <img className='product-image' src="" alt={"alt"} />
+        </div>
+        <div className='right-side'>
+          <div className='product-desc'>
+            <p>
+              lorem ipsum, this description to this product
+            </p>
+          </div> 
+          <div>
+            <Buttons>
+              Buy Now
+            </Buttons>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h3 style={contentStyle}>2</h3>
+    <div className='sliderComp'>
+      <div style={contentStyle}>2</div>
     </div>
-    <div>
-      <h3 style={contentStyle}>3</h3>
+    <div className='sliderComp'>
+      <div style={contentStyle}>3</div>
     </div>
-    <div>
-      <h3 style={contentStyle}>4</h3>
+    <div className='sliderComp'>
+      <div style={contentStyle}>4</div>
     </div>
   </Carousel>
 );

@@ -1,0 +1,11 @@
+
+
+
+.slider_comp{
+    height: '500px';
+    margin: 'auto';
+    color: '#fff';
+    /* line_height: '160px';
+    text_align: 'center';;  */
+    display: 'flex';
+  };

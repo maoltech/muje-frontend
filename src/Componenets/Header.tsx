@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       </div>
       <div className='header_center'>
         <div className="logo">
-          <img src={"../Statics/Images/mujeheader.png"} alt='Home' />
+          <Image src="https://res.cloudinary.com/dsbkmkh2v/image/upload/v1684494322/mujeheader_kg28z7.png" alt='Home' width={100} height={33} />
         </div>
       </div>
 

@@ -9,6 +9,7 @@ import './auth.css';
     const onFinish =()=>{
         console.log('Success:');
     }
+    
     return (
       <div className="signup-page">
         <div className="signup-form">
@@ -36,9 +37,7 @@ import './auth.css';
               />
             </Form.Item>
             <Form.Item>
-              <Button type="primary" block>
-                Sign In
-              </Button>
+              <Button children="SignIn" />
             </Form.Item>
           </Form>
         </div>

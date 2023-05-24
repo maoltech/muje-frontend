@@ -41,9 +41,7 @@ import './auth.css';
               />
             </Form.Item>
             <Form.Item>
-              <Button  block>
-                Sign up
-              </Button>
+              <Button children="SignUp" />
             </Form.Item>
           </Form>
         </div>

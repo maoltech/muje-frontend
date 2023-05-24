@@ -4,7 +4,7 @@ import AuthRouter from './Routes/AuthRouter';
 const App = () => {
   return (
     <div className="App">
-     <AuthRouter/>
+      <AuthRouter/>
     </div>
   );
 }

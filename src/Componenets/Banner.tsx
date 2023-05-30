@@ -1,39 +1,43 @@
 import Buttons from "./Button"
 import "./Banner.css"
 
-const contentStyle: React.CSSProperties = {
-  height: '500px',
-  margin: 'auto',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center', 
-  display: 'flex'
-};
+type Props = {
+  product_description?: string,
+  product_image: string,
+  product_price?: number,
+  product_title?: string
+}
 
-
-const ProductBanner = () => {
+const ProductBanner = ({
+  product_description, 
+  product_image,
+  product_price,
+  product_title}: Props) => {
 
     return(
-    <div className='sliderComp'>
-      <div style={contentStyle}>
-        <div className='left-side'>
-          <img className='product-image' src="" alt={"alt"} />
-        </div>
-        <div className='right-side'>
-          <div className='product-desc'>
-            <p>
-              lorem ipsum, this description to this product
+    <div className='featured-product'>
+      <div className='image-container'>
+        <img className='product-image' src= {product_image} alt={product_title} />
+      </div>
+        <div className='product-details'>
+            <h1 className="product-title">
+              {product_title}
+            </h1>
+            <p className='product-description'>
+              {product_description}
             </p>
-          </div> 
-          <div>
+            <p className="product-price">
+                {product_price}
+            </p>
             <Buttons>
               Buy Now
             </Buttons>
-          </div>
+          
         </div>
-      </div>
+    
     </div>
     )
 }
 
 export default ProductBanner
+

@@ -7,17 +7,19 @@ const {Text } = Typography;
 type Props = CardProps& {
     product_name?: string, 
     product_description?: string, 
-    product_price?:string, 
-    product_qty_sold?: string,
-    product_rating?: string,
+    product_price?:number, 
+    product_qty_sold?: number,
+    product_rating?: number,
     product_image?: string,
-    product_title?: string
+    product_title?: string,
+    product_key?: number
   };
 
 const ProductCard = ({
     product_name, 
     product_description, 
-    product_price, 
+    product_price,
+    product_key, 
     product_qty_sold,
     product_rating,
     product_image,
@@ -26,6 +28,7 @@ const ProductCard = ({
 
     return(
         <Card
+            key={product_key}
             hoverable
             title={`${product_title}`}
             style={{ width: "100%" }}

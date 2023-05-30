@@ -9,7 +9,6 @@ const Home = () =>{
         <div>
             <Header />
             <Slider />
-            <ProductCard />
         </div>
     )
 }

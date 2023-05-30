@@ -1,5 +1,6 @@
 
-
- /* .sliderComp{
-    border: solid 5px green;
-}  */
+.slider{
+    width:100%;
+    height:100vh;
+    display: flex;
+}

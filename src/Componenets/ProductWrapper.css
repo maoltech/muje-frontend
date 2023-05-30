@@ -1,0 +1,24 @@
+.products-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .products-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

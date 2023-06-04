@@ -1,7 +1,7 @@
 import { Pagination } from "antd"
 import {useState} from "react"
-import "./ProductWrapper.css"
-import ProductCard from "./Card"
+import "./Style/ProductWrapper.css"
+import ProductCard from "./ProductCard"
 
 
 
@@ -20,14 +20,10 @@ const pageSize = 20
 
 
 
-const ProductList = () =>{
+const ProductWrapper = () =>{
 
       // Current page state
     const [currentPage, setCurrentPage] = useState(1);
-
-
-    // Calculate total number of pages
-    const totalPage = Math.ceil(products.length / pageSize);
 
     // Handle page change
     const handlePageChange = (page: any) => {
@@ -39,13 +35,13 @@ const ProductList = () =>{
     const endIndex = startIndex + pageSize;
     const currentProducts = products.slice(startIndex, endIndex);
 
-    
+
     return(
         <div className='products-wrapper'>
             <div className='products-container'>
             {currentProducts.map((product) => (
           <ProductCard 
-          product_key={product.product_key} 
+          key={product.product_key} 
           product_title={product.product_title}
           product_image={product.product_image}
           product_description={product.product_description}
@@ -70,4 +66,4 @@ const ProductList = () =>{
 
 }
 
-export default ProductList
+export default ProductWrapper

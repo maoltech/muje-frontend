@@ -6,7 +6,7 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from '@ant-design/icons';
-import './Header.css';
+import './Style/Header.css';
 
 const Header: React.FC = () => {
 

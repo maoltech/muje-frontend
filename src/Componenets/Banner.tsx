@@ -1,5 +1,5 @@
 import Buttons from "./Button"
-import "./Banner.css"
+import "./Style/Banner.css"
 
 type Props = {
   product_description?: string,

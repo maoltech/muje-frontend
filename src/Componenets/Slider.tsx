@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import './Slider.css';
+import './Style/Slider.css';
 import ProductBanner from './Banner';
 
 

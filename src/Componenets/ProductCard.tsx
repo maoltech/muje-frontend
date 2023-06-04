@@ -1,5 +1,6 @@
-import { StairsOutlined } from "@mui/icons-material";
+import { StarFilled } from "@ant-design/icons";
 import { Card, CardProps, Typography } from "antd";
+import "./Style/ProductCard.css";
 
 const {Text } = Typography; 
 
@@ -12,14 +13,14 @@ type Props = CardProps& {
     product_rating?: number,
     product_image?: string,
     product_title?: string,
-    product_key?: number
+    key?: number
   };
 
 const ProductCard = ({
     product_name, 
     product_description, 
     product_price,
-    product_key, 
+    key, 
     product_qty_sold,
     product_rating,
     product_image,
@@ -28,31 +29,31 @@ const ProductCard = ({
 
     return(
         <Card
-            key={product_key}
             hoverable
+            className="product-card"
             title={`${product_title}`}
-            style={{ width: "100%" }}
-            cover={<img src={`${product_image}`} alt={`${product_name}`}/>} >
+            key={key}
+            cover={<img src={product_image} alt={product_name}/>} 
+        >
             <Card.Meta
             style={{ margin: "auto", padding: "" }}
-            description={
-            <Text className="font-[500] leading-[10px]"> {product_description}</Text>
-            }
+            description={ <Text className="product-desc"> {product_description} </Text> }
         />
         <div
             style={{ marginTop: "" }}
-            className="flex flex-col items-start justify-start gap-[0.5rem]"
+            className="product-info"
         >
-            <div className="flex justify-between w-full">
-                <div className="flex items-center gap-[0.5rem]">
+            <div className="product-details">
+                <div className="product-rating">
                     <span>
-                        <StairsOutlined className="text-[#FAB005]" />
+                        <StairFilled  className="start-sign" />
                     </span>
                     <span>
-                        {product_rating}
-                    </span>
+                        N{product_rating}
+                    </span>     
                 </div>
-                <div className="font-[600]">{`N${product_price}`}</div>
+                <div className="product-sold">{'Qauntity Sold:'+ product_qty_sold}</div>
+                <div className="product-price">{'N'+ product_price}</div>
             </div>
         </div>
         </Card>

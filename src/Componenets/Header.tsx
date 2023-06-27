@@ -1,10 +1,13 @@
 import React from 'react';
 import { Input, Image } from 'antd';
+import { Link } from 'react-router-dom';
+
 
 import {
   UserOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
+  MailOutlined
 } from '@ant-design/icons';
 import './Style/Header.css';
 
@@ -24,7 +27,9 @@ const Header: React.FC = () => {
     <div className="header">
       <div className="header_left">
         <div className="user-icon">
-          <UserOutlined />
+          <Link to="/buyerdashboard">
+            <UserOutlined />
+          </Link>
         </div>
       </div>
       <div className='header_center'>
@@ -34,12 +39,20 @@ const Header: React.FC = () => {
       </div>
 
       <div className='header_right'>
+        <div className="badge">
+          <div className="cart-icon">
+            <MailOutlined />
+            <span className="badge-notification">1</span>
+          </div>
+        </div>
         <div className="search-bar">
           <Input style ={searchBarStyle} placeholder="Search" prefix={<SearchOutlined />} />
         </div>
-
-        <div className="cart-icon">
-          <ShoppingCartOutlined />
+        <div className="badge">
+          <div className="cart-icon">
+            <ShoppingCartOutlined />
+            <span className="badge-notification">1</span>
+          </div>
         </div>
       </div>
     </div>

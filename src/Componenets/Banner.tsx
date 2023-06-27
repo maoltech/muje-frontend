@@ -17,16 +17,16 @@ const ProductBanner = ({
     return(
     <div className='featured-product'>
       <div className='image-container'>
-        <img className='product-image' src= {product_image} alt={product_title} />
+        <img className='banner-image' src= {product_image} alt={product_title} />
       </div>
-        <div className='product-details'>
-            <h1 className="product-title">
+        <div className='banner-details'>
+            <h1 className="banner-title">
               {product_title}
             </h1>
-            <p className='product-description'>
+            <p className='banner-description'>
               {product_description}
             </p>
-            <p className="product-price">
+            <p className="banner-price">
                 {product_price}
             </p>
             <Buttons>

@@ -57,21 +57,21 @@
   width: 100%;
 }
 
-.product-image {
+.banner-image {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
 }
 
-.product-details {
+.banner-details {
   margin-top: 20px;
 }
 
-.product-description {
+.banner-description {
   margin-bottom: 10px;
 }
 
-.product-price {
+.banner-price {
   margin-bottom: 10px;
 }
 

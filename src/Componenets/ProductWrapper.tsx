@@ -12,6 +12,16 @@ const products = [
     { product_key:4, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
     { product_key:5, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
     { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
+    { product_key:6, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"},
     { product_key:7, product_name: "Rice", product_description: "lorem ipsum dolor sos os ...", product_price: 2000, product_qty_sold: 10, product_rating: 4.0, product_image: "../srcs/", product_title: "Ogun rice"}
 ]
 
@@ -52,14 +62,17 @@ const ProductWrapper = () =>{
            />
           
         ))}
-                
-            <Pagination
-                className="pagination"
-                current={currentPage}
-                pageSize={pageSize}
-                total={pageLength}
-                onChange={handlePageChange}
-            />
+
+
+            </div>
+            <div className="pagination-container">
+                <Pagination
+                    className="pagination"
+                    current={currentPage}
+                    pageSize={pageSize}
+                    total={pageLength}
+                    onChange={handlePageChange}
+                />
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
-import { StarFilled } from "@ant-design/icons";
 import { Card, CardProps, Typography } from "antd";
 import "./Style/ProductCard.css";
+import { StarFilled } from '@ant-design/icons';
 
 const {Text } = Typography; 
 
@@ -46,14 +46,16 @@ const ProductCard = ({
             <div className="product-details">
                 <div className="product-rating">
                     <span>
-                        <StairFilled  className="start-sign" />
+                        <StarFilled className="star-sign" />
                     </span>
                     <span>
-                        N{product_rating}
+                        {product_rating}
                     </span>     
                 </div>
-                <div className="product-sold">{'Qauntity Sold:'+ product_qty_sold}</div>
-                <div className="product-price">{'N'+ product_price}</div>
+                <div className="product-right">
+                    <div className="product-sold">{'Qauntity Sold:'+ product_qty_sold}</div>
+                    <div className="product-price">{'Price: N'+ product_price}</div>
+                </div>
             </div>
         </div>
         </Card>

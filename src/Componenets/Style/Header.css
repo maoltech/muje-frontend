@@ -29,6 +29,10 @@
     
   } */
 
+  .badge {
+    position: relative;
+    display: inline-block;
+  }
   
   .logo {
     margin: 0 auto;
@@ -65,7 +69,22 @@
   }
 
   .cart-icon {
+    margin: 5px;
     font-size: 24px;
     cursor: pointer;
   }
-  
+
+  .badge-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

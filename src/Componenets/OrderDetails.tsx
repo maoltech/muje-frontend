@@ -1,10 +1,11 @@
+import { Table } from 'antd';
 import React from 'react';
 
 type OrderProps = {
   trackingId: string;
   orderId: string;
   deliveryDate: string;
-  orderStatus: string;
+  status: string;
   products: {
     item: string;
     qty: number;
@@ -19,29 +20,54 @@ const OrderDetails: React.FC<OrderProps> = ({
   trackingId,
   orderId,
   deliveryDate,
-  orderStatus,
+  status,
   products,
   total,
   shippingMethod,
   productLocation,
 }) => {
+
+
+  const columns = [
+    {
+      title: 'Item',
+      dataIndex: 'item',
+      key: 'item',
+    },
+    {
+      title: 'Quantity',
+      dataIndex: 'qty',
+      key: 'qty',
+    },
+    {
+      title: 'Price',
+      dataIndex: 'price',
+      key: 'price',
+    },
+    {
+      title: 'Total Price',
+      dataIndex: 'totalPrice',
+      key: 'totalPrice',
+      render: (text: string, record: any) => {
+        return (record.qty * record.price).toFixed(2);
+      },
+    },
+  ];
+
   return (
     <div>
       <h2>Order Details</h2>
       <p>Tracking ID: {trackingId}</p>
       <p>Order ID: {orderId}</p>
       <p>Delivery Date: {deliveryDate}</p>
-      <p>Order Status: {orderStatus}</p>
+      <p>Order Status: {status}</p>
       <h3>Products</h3>
-      <ul>
-        {products.map((product, index) => (
-          <li key={index}>
-            <p>Item: {product.item}</p>
-            <p>Quantity: {product.qty}</p>
-            <p>Price: {product.price}</p>
-          </li>
-        ))}
-      </ul>
+      <Table
+        dataSource={products}
+        columns={columns}
+        pagination={false}
+        rowKey={(record) => record.item}
+      />
       <p>Total: {total}</p>
       <p>Shipping Method: {shippingMethod}</p>
       <p>Product Location: {productLocation}</p>
@@ -49,4 +75,5 @@ const OrderDetails: React.FC<OrderProps> = ({
   );
 };
 
+export type { OrderProps };
 export default OrderDetails;

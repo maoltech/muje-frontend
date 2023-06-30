@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
-import "./Style/BuyerDashboard.css";
+import "./Style/BuyerDetail.css";
 import { Input, Select } from "antd";
 
 const { Option } = Select;
@@ -47,7 +47,7 @@ const BuyersDetail: React.FC = () => {
         <Input placeholder="City" value={city} onChange={(e) => setCity(e.target.value)} />
       </div>
       <div className="country">
-        <label>Country</label>
+        <label>Country:</label>
         <Select value={country} onChange={(value) => setCountry(value)}>
           <Option value="USA">USA</Option>
           <Option value="UK">UK</Option>
@@ -56,7 +56,7 @@ const BuyersDetail: React.FC = () => {
         </Select>
       </div>
       <div className="sex">
-        <label>Sex</label>
+        <label>Sex:</label>
         <Select value={sex} onChange={(value) => setSex(value)}>
           <Option value="Male">Male</Option>
           <Option value="Female">Female</Option>

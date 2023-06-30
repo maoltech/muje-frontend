@@ -4,9 +4,9 @@ import Header from "../Componenets/Header"
 import BuyersDetail from "../Componenets/BuyerDetail";
 import BuyerRating from "../Componenets/BuyerRating";
 import OrderList from "../Componenets/Orders";
+import "./BuyerDashboard.css"; 
 
-
-const rating = 'white';
+const rating = 'Novice';
 const criteria = [
     {
       name: 'Spend 50 hours online',
@@ -32,12 +32,12 @@ const criteria = [
   ];
 
   const orders = [
-    { status: "created", createdAt: "22/06/23", orderId: "123dfgffhhkf" },
-    { status: "received", createdAt: "23/06/23", orderId: "123dfgffhfjdfs" },
-    { status: "pending", createdAt: "24/06/23", orderId: "123dfkfjffhhkf" },
-    { status: "shipping", createdAt: "24/06/23", orderId: "123dfgffdsjndkf" },
-    { status: "delivered", createdAt: "25/06/23", orderId: "123dfgfnfhkf" },
-    { status: "completed", createdAt: "26/06/23", orderId: "123dfgffhdsnskf" }
+    { status: "created", createdAt: "22/06/23", orderId: "123dfgffhhkf", trackingId: "fdnfdnjf",  deliveryDate: "30/06/23", products: [{item: "rice", qty: 2, price: 2000}, {item: "beans", qty: 3, price: 1000} ], total:7000, shippingMethod: "road", productLocation: "Island" },
+    { status: "received", createdAt: "23/06/23", orderId: "123dfgffhfjdfs", trackingId: "fdnfdnjf",  deliveryDate: "30/06/23", products: [{item: "rice", qty: 2, price: 2000}, {item: "beans", qty: 3, price: 1000} ], total:7000, shippingMethod: "road", productLocation: "Island" },
+    { status: "pending", createdAt: "24/06/23", orderId: "123dfkfjffhhkf", trackingId: "fdnfdnjf",  deliveryDate: "30/06/23", products: [{item: "rice", qty: 2, price: 2000}, {item: "beans", qty: 3, price: 1000} ], total:7000, shippingMethod: "road", productLocation: "Island" },
+    { status: "shipping", createdAt: "24/06/23", orderId: "123dfgffdsjndkf", trackingId: "fdnfdnjf",  deliveryDate: "30/06/23", products: [{item: "rice", qty: 2, price: 2000}, {item: "beans", qty: 3, price: 1000} ], total:7000, shippingMethod: "road", productLocation: "Island" },
+    { status: "delivered", createdAt: "25/06/23", orderId: "123dfgfnfhkf", trackingId: "fdnfdnjf",  deliveryDate: "30/06/23", products: [{item: "rice", qty: 2, price: 2000}, {item: "beans", qty: 3, price: 1000} ], total:7000, shippingMethod: "road", productLocation: "Island" },
+    { status: "completed", createdAt: "26/06/23", orderId: "123dfgffhdsnskf", trackingId: "fdnfdnjf",  deliveryDate: "30/06/23", products: [{item: "rice", qty: 2, price: 2000}, {item: "beans", qty: 3, price: 1000} ], total:7000, shippingMethod: "road", productLocation: "Island" }
   ];
 
 
@@ -47,9 +47,15 @@ const BuyerDashboard = () =>{
         <div>
             <Header />
             <div className="dashboard">
-                <BuyersDetail />
-                <OrderList orders={orders} />
-                <BuyerRating rating={rating} criteria={criteria} />
+                <div className="section">
+                    <BuyersDetail />
+                </div>
+                <div className="section">
+                    <OrderList orders={orders} />
+                </div>
+                <div className="section">
+                    <BuyerRating rating={rating} criteria={criteria} />
+                </div>
             </div>
             <Footer />
         </div>

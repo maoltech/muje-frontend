@@ -1,0 +1,10 @@
+.buyer-rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ratings{
+    margin-top: 20px;
+}

@@ -1,0 +1,11 @@
+.ant-table-tbody > tr > td {
+  background: none;
+  border: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.orders{
+  margin-top: 10px;
+  align-items: center;
+}

@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <div className="header">
       <div className="header_left">
         <div className="user-icon">
-          <Link to="/buyerdashboard">
+          <Link to="/buyerdashboard" className='icon'>
             <UserOutlined />
           </Link>
         </div>

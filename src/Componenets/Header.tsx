@@ -1,5 +1,5 @@
-import React from 'react';
-import { Input, Image } from 'antd';
+import React, {useState} from 'react';
+import { Input, Modal } from 'antd';
 import { Link } from 'react-router-dom';
 
 
@@ -10,6 +10,7 @@ import {
   MailOutlined
 } from '@ant-design/icons';
 import './Style/Header.css';
+import Cart from './Cart';
 
 const Header: React.FC = () => {
 
@@ -22,6 +23,15 @@ const Header: React.FC = () => {
       cursor: 'pointer'
   };
 
+  const [isCartModalVisible, setIsCartModalVisible] = useState(false);
+
+  const showCartModal = () => {
+    setIsCartModalVisible(true);
+  };
+
+  const hideCartModal = () => {
+    setIsCartModalVisible(false);
+  };
 
   return (
     <div className="header">
@@ -34,7 +44,7 @@ const Header: React.FC = () => {
       </div>
       <div className='header_center'>
         <div className="logo">
-          <Image src="https://res.cloudinary.com/dsbkmkh2v/image/upload/v1684494322/mujeheader_kg28z7.png" alt='Home' width={100} height={33} />
+          MUJE
         </div>
       </div>
 
@@ -49,12 +59,21 @@ const Header: React.FC = () => {
           <Input style ={searchBarStyle} placeholder="Search" prefix={<SearchOutlined />} />
         </div>
         <div className="badge">
-          <div className="cart-icon">
-            <ShoppingCartOutlined />
+          <div className="cart-icon" onClick={showCartModal}>
+            <ShoppingCartOutlined/>
             <span className="badge-notification">1</span>
           </div>
         </div>
       </div>
+
+      <Modal
+        title="Cart"
+        visible={isCartModalVisible}
+        onCancel={hideCartModal}
+        footer={null}
+      >
+        <Cart />
+      </Modal>
     </div>
   );
 };

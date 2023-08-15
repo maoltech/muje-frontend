@@ -17,7 +17,7 @@ const ProductBanner = ({
     return(
     <div className='featured-product'>
       <div className='image-container'>
-        <img className='banner-image' src= {product_image} alt={product_title} />
+        <img className='banner-image' src={product_image} alt={product_title} />
       </div>
         <div className='banner-details'>
             <h1 className="banner-title">
@@ -27,7 +27,7 @@ const ProductBanner = ({
               {product_description}
             </p>
             <p className="banner-price">
-                {product_price}
+              &#8358; {product_price}
             </p>
             <Buttons>
               Buy Now

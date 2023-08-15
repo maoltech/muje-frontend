@@ -5,6 +5,8 @@ import BuyersDetail from "../Componenets/BuyerDetail";
 import BuyerRating from "../Componenets/BuyerRating";
 import OrderList from "../Componenets/Orders";
 import "./BuyerDashboard.css"; 
+import UserSpendingChart from "../Componenets/LineChart";
+import CustomerSpendingChart from "../Componenets/LineChart";
 
 const rating = 'Novice';
 const criteria = [
@@ -41,6 +43,18 @@ const criteria = [
   ];
 
 
+
+export const customerSpendingData= [
+  { month: 'Jan', amount: 400 },
+  { month: 'Feb', amount: 300 },
+  { month: 'Mar', amount: 200 },
+  { month: 'Apr', amount: 278 },
+  { month: 'May', amount: 189 },
+  { month: 'Jun', amount: 239 },
+  // Add more data points as needed
+];
+
+
 const BuyerDashboard = () =>{
 
     return(
@@ -57,6 +71,8 @@ const BuyerDashboard = () =>{
                     <BuyerRating rating={rating} criteria={criteria} />
                 </div>
             </div>
+            <CustomerSpendingChart data={customerSpendingData} />
+
             <Footer />
         </div>
     )

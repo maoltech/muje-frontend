@@ -39,14 +39,33 @@
     position: relative;
     display: inline-block;
   }
-  
+
   .logo {
+    margin: 0 auto;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #02a582;
+    background-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .logo:hover {
+    box-shadow: 0 0 10px rgba(2, 165, 130, 0.8);
+  }
+  /* .logo {
     margin: 0 auto;
     width: 100px;
     height: 20px;
     cursor: pointer;
     border: solid green 4px;
-  }
+  } */
   
   .header_right{
     margin-right: 10px;
@@ -79,6 +98,7 @@
     font-size: 24px;
     cursor: pointer;
   }
+
 
   .badge-notification {
     position: absolute;

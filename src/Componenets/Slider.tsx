@@ -4,7 +4,7 @@ import './Style/Slider.css';
 import ProductBanner from './Banner';
 
 
-const product_image = '../Statics/Images/blender.jpg'
+const product_image = 'https://res.cloudinary.com/dlzpd1pgi/image/upload/v1690394667/9154822221_398525818_oksrpo.jpg'
 const product_description = 'lorem ipsum, this description to this product'
 const product_price = 2000
 const product_title = "Product Title"
